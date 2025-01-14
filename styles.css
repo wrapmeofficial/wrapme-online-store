@@ -1,0 +1,229 @@
+/* Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@300;400&display=swap');
+
+/* Reset dasar dan pengaturan umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+/* Body */
+body {
+  background: linear-gradient(to bottom, #d1c6e1, #ffffff, #d9dddc, #999da0); /* Gradien dari putih gelap, putih, pink, pink gelap */
+  color: #333;
+  font-size: 16px; /* Ukuran font sedikit lebih kecil */
+}
+
+/* Header */
+header {
+  background-color: #555; /* Aksen abu tua */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+.product-images img {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden;
+  }
+  
+  .product-images img.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+/* Home Section */
+.home {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.home h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Categories Section */
+.categories {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 220px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.category-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Products Section */
+.products {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 220px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 1.3em;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-card .buy-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card .buy-btn:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #555; /* Aksen abu tua */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.1em;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+  .category-cards, .product-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card, .product-card {
+    width: 80%;
+    margin: 15px 0;
+  }
+}
+
+  

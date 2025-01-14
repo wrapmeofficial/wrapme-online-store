@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper - WrapMe Online Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Fungsi untuk membuka pop-up kategori
+    function openCategoryModal() {
+      document.getElementById('category-modal').style.display = 'block';
+    }
+
+    // Fungsi untuk menutup pop-up kategori
+    function closeCategoryModal() {
+      document.getElementById('category-modal').style.display = 'none';
+    }
+
+    // Fungsi untuk mengarahkan ke halaman kategori
+    function goToCategoryPage(category) {
+      window.location.href = category + ".html"; // Arahkan ke halaman sesuai kategori
+    }
+  </script>
+  <style>
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Optional: Add transition effect */
+    .modal-content {
+      animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+
+  <script>
+    // Fungsi untuk menambahkan produk ke dalam keranjang
+    let cart = [];
+
+    function addToCart(productName, price) {
+      cart.push({ productName, price });
+      alert(productName + " telah ditambahkan ke keranjang!");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/wrapme.png" alt="Logo Toko Pakaian" class="logo-img">
+      <h1>Online Store</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="javascript:void(0);" onclick="openCategoryModal()">Kategori</a></li>
+        <li><a href="products.html">Produk</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Upper Products Section -->
+  <section id="upper-products" class="products">
+    <div class="container">
+      <h2>Produk Upper</h2>
+      <div class="product-cards">
+        <div class="product-card">
+          <img src="images/kaos.jpg" alt="Kaos Pria">
+          <h3>Kaos Pria</h3>
+          <p>Kaos berkualitas tinggi, nyaman dipakai untuk aktivitas sehari-hari.</p>
+          <p class="price">Rp149.999</p>
+          <button class="buy-btn" onclick="addToCart('Kaos Pria', 149999)">Tambah ke Keranjang</button>
+        </div>
+        <div class="product-card">
+          <img src="images/jaket.jpg" alt="Jaket Pria">
+          <h3>Jaket Pria</h3>
+          <p>Jaket stylish untuk cuaca dingin.</p>
+          <p class="price">Rp249.999</p>
+          <button class="buy-btn" onclick="addToCart('Jaket Pria', 249999)">Tambah ke Keranjang</button>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Pop-up Modal Kategori -->
+<div id="category-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCategoryModal()">&times;</span>
+      <h2>Pilih Kategori</h2>
+      <ul>
+        <li><a href="upper.html" onclick="goToCategoryPage('upper')">Upper</a></li>
+        <li><a href="bottom.html" onclick="goToCategoryPage('bottom')">Bottom</a></li>
+        <li><a href="accessories.html" onclick="goToCategoryPage('accessories')">Accessories</a></li>
+        <li><a href="shoes.html" onclick="goToCategoryPage('shoes')">Shoes</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Toko Pakaian Online. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+  <style>
+    /* Modal Pop-up Styling */
+    .modal {
+     display: none;
+     position: fixed;
+     z-index: 1;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0,0,0,0.5);
+     overflow: auto;
+   }
+
+   .modal-content {
+     background-color: #fff;
+     margin: 10% auto;
+     padding: 30px;
+     border-radius: 8px;
+     width: 40%;
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+     text-align: center;
+   }
+
+   .modal-content h2 {
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: #555;
+   }
+
+   .modal-content ul {
+     list-style-type: none;
+     padding: 0;
+   }
+
+   .modal-content ul li {
+     margin: 15px 0;
+   }
+
+   .modal-content ul li a {
+     font-size: 18px;
+     color: #555;
+     text-decoration: none;
+   }
+
+   .modal-content ul li a:hover {
+     text-decoration: underline;
+   }
+
+   .modal-content .close {
+     position: absolute;
+     top: 10px;
+     right: 20px;
+     font-size: 32px;
+     font-weight: bold;
+     color: #888;
+   }
+
+   .modal-content .close:hover {
+     color: black;
+     cursor: pointer;
+   }
+</style>
+</body>
+</html>
